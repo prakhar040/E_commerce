@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../logo.svg";
 import { styled } from 'styled-components';
 import { ButtonContainer } from "./ButtonStyle.jsx";
+import { Appstate } from '../App';
 
 
 const Navbar = () => {
+    const useAppstate=useContext(Appstate);
     
     return (
         
@@ -25,6 +27,15 @@ const Navbar = () => {
                     </Link>
                 </li>
             </ul>
+            { useAppstate.adminLogin ? (
+                <Link to={"/addproduct"}>
+                <button className=' text-blue ml-48 text-xl bg-white p-2'>Logout</button>
+                </Link>
+            ) : (
+            <Link to={"/admin"}>
+            <button className=' text-blue ml-48 text-xl bg-white p-2'>Admin Login</button>
+            </Link>
+            )}
             <Link to="/cart" className="ml-auto">
                 <ButtonContainer>
                     <span className="mr-2">

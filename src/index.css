@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+table{
+    border-collapse: separate;
+    border-spacing: 20px;
+    border: 1px solid white;
+    width: 100%;
+  }
+  

@@ -11,6 +11,9 @@ import Default from './components/Default';
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import { createContext } from "react";
+import AddProduct from "./components/AddProduct";
+import ShowProducts from "./components/showProducts";
+import Admin from "./components/Admin";
 
 const Appstate=createContext();
 
@@ -29,6 +32,9 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/addproduct" element={<AddProduct />} />
+        <Route path="/showproduct" element={<ShowProducts />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<Default />} />
 
 

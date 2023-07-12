@@ -15,4 +15,8 @@ export const db = getFirestore(app);
 
 export const usersRef = collection(db, "users");
 
+export const productsRef = collection(db, "products");
+
+export const adminRef = collection(db, "admin");
+
 export default app;
